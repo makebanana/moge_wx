@@ -1,0 +1,108 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper class="index-swiper" indicator-dots="true" indicator-color="#fff" indicator-active-color="#20a0ff">
+    <block wx:for="{{banner}}" wx:key="{{item.id}}">
+      <swiper-item>
+        <image  mode="aspectFill" src="{{item.url}}" class="swipe-item" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="width100 search-box">
+    <navigator url="../list/list?type=3">
+      <view class="search-input"> 搜索想要的风格</view>
+    </navigator>
+  </view>
+
+  <view class="index-nav width100 flex-box">
+    <navigator url="../list/list?type=1">
+       <view class="nav-item flex-1"><text>作品</text><text>展示</text></view>
+    </navigator>
+    <navigator url="../list/list?type=2">
+      <view class="nav-item flex-1"><text>客片</text><text>分享</text></view>
+    </navigator>
+    <navigator url="../rich/rich?id=2">
+      <view class="nav-item flex-1"><text>相片</text><text>制作</text></view>
+    </navigator>
+    <navigator url="../rich/rich?id=2">
+      <view class="nav-item flex-1"><text>摄影</text><text>流程</text></view>
+    </navigator>
+  </view>
+
+  <view class="width100">
+    <view class=" item-title width100 flex-box">
+      <text class="flex-4"><text class="iconfont icon-tupian"></text> 风格推荐</text>
+      <navigator url="../list/list?type=1">
+        <text class="flex-1 iconfont icon-gengduo"></text>
+      </navigator>
+    </view>
+    <view class="width100 flex-box list-box">
+      
+      <view wx:for="{{picList}}" wx:key="{{item.id}}">
+        <navigator url="../detail/detail?id={{item.id}}">
+          <view>
+            <image mode="aspectFill" src="{{item.url}}"></image>
+          </view>
+          <text>{{item.name}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="width100" style="margin-top: 10rpx;">
+    <view class=" item-title width100 flex-box">
+      <text class="flex-4"><text class="iconfont icon-tupian"></text> 客片分享</text>
+      <navigator url="../list/list?type=2">
+        <text class="flex-1 iconfont icon-gengduo"></text>
+      </navigator>
+    </view>
+    <view class="width100 flex-box list-box">
+      <view wx:for="{{picList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="listTap">
+        <navigator url="../detail/detail?id={{item.id}}">
+          <view>
+            <image mode="aspectFill" src="{{item.url}}"></image>
+          </view>
+          <text>{{item.name}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="index-about width100">
+    <text>关于墨阁</text>
+    <view class="flex-box about-content">
+      <view class="flex-1">
+        <image mode="aspectFill" src="/lib/images/logo_moge.png" ></image>
+      </view>
+      <view class="flex-2">
+        <text>   </text>  
+          墨阁摄影，位于绿城店铺，是一家90后新锐团队，一支技术超群经验丰富的年轻创作团队，通过长年累月不断努力的学习创新，凭借独特的眼光，敏锐的思维，专业的技术，引领着摄影时尚的潮流。一直以来，我们更多的站在客户的角度，更多的考虑客户的想法和利益，通过我们的努力，为客户创作出更出色的作品。
+        
+      </view>
+    </view>
+  </view>
+
+  <view class="index-footer width100">
+    <view class="flex-box">
+      <view class="flex-1" bindtap="makeCall" data-phone="13675789950">
+        <view>
+          <text class=" iconfont icon-lianxiren"></text> 阿宝
+        </view>
+        <view>
+          <text class=" iconfont icon-dianhua"></text> 13775755520
+        </view>
+      </view>
+      <view class="flex-1" bindtap="makeCall" bindtap="makeCall" data-phone="13675789950">
+        <view>
+          <text class="iconfont icon-lianxiren"></text> 阿宝
+        </view>
+        <view>
+          <text class=" iconfont icon-dianhua"></text> 13775755520
+        </view>
+      </view>
+    </view>
+    <view bindtap="openMap">
+      <text class="iconfont icon-dingwei"></text> 浙江省诸暨市红旗路75号xxx
+    </view>
+  </view>
+</view>
+<button open-type="contact" class="fixed-btn iconfont icon-jiaoliu"></button>
+

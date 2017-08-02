@@ -1,0 +1,18 @@
+<!--detail.wxml-->
+<view class="detail-wrap">
+  <view class="make-like" animation="{{animationData}}" bindtap="changeLike">
+    <text  class="iconfont  {{isLike ? 'icon-xing' : 'icon-shoucangjia'}}"></text>
+  </view>
+  <view class="detail-title">{{name}} <text data-kind="112" bindtap="goToList">夏日密林</text></view>
+  <view class="detail-intro">
+    <text class="intro-indent">
+    </text>
+    {{intro}}
+  </view>
+  <view class="detail-img-box width100">
+    <image wx:for="{{pics}}" wx:key="{{index}}" src="{{item}}" mode="widthFix"></image>
+  </view>
+  <view class="width100 logo-footer">
+    <image src="/lib/images/moge_big.png" mode="aspectFit"></image>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+/* center.wxss */
+.info-box{
+  text-align: center;
+}
+
+.info-box{
+  margin-top: 50rpx;
+}
+.info-box image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%
+}
+.info-box view{
+  margin-top: 30rpx;
+}
+
+.flex-box{
+  flex-wrap:wrap;
+}
+.flex-box > view{
+  width: 48%;
+}

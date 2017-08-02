@@ -1,0 +1,40 @@
+/* list.wxss */
+.select-box{
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #e3e3e3;
+}
+.type-one{
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #e3e3e3;
+  font-size:32rpx;
+}
+.type-one text,
+.type-two label{
+  display:inline-block;
+  margin: 10rpx 10rpx 0 0;
+  padding:10rpx 20rpx;
+  border:1px solid #e3e3e3;
+  border-radius:5px;
+  background-color: #e3e3e3;
+}
+.select-box .active{
+  border-color: #f00;
+  color: #f00;
+  background-color: #fff;
+}
+.type-two{
+  font-size: 28rpx;
+}
+
+.list-nofind{
+  margin-top: 200rpx;
+  text-align: center;
+  color: #666;
+}
+
+.list-loading,
+.list-loadAll{
+  margin-top: 20rpx;
+  color: #666;
+  font-size: 28rpx;
+}

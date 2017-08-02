@@ -1,0 +1,39 @@
+<view class="width100 search-box">
+  <input wx:if="{{type === 3}}" type="text" class="search-input" confirm-type="search" placeholder="搜索想要的风格" auto-focus />
+  <input wx:if="{{type !== 3}}" type="text" class="search-input" confirm-type="search" placeholder="搜索想要的风格"  />
+</view>
+<view class="container">
+  <view class="select-box width100">
+    <view class="type-one">
+      <text class="{{type == '1' ? 'active' : ''}}" data-key="1" bindtap="changeType">样片</text>
+      <text class="{{type == '2' ? 'active' : ''}}" data-key="2" bindtap="changeType">客片</text>
+    </view>
+    <view class="type-two">
+      <checkbox-group bindchange="listenCheckboxChange">
+        <block wx:for="{{kindsList}}" wx:key="{{item.id}}">
+          <label class="{{item.checked ? 'active' : ''}}">
+              <checkbox value="{{item.id}}" checked="{{item.checked}}" hidden="false"/>{{item.name}}
+          </label>
+        </block>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class="width100 flex-box list-box">
+    <view wx:for="{{list}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="listTap">
+      <view>
+        <image mode="aspectFill" src="{{item.url}}"></image>
+      </view>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view class="list-nofind width100" wx:if="{{isNoFind}}">
+    <view>没有找到相关的相片</view> 
+    <view>(我会催他快点更新的~ :>)</view>    
+  </view>
+  <view class="list-loading" wx:if="{{isLoading}}">
+    正在加载更多...
+  </view>
+  <view class="list-loadAll" wx:if="{{isLoaded}}">
+    没有更多了哟~
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<view class="container">
+  <view wx:if="{{isNoLoged}}">
+    请先登录
+  </view>
+  <view wx:if="{{isLoged}}" class="width100">
+    <view class="select-box width100">
+      <view class="type-one">
+        <text class="{{type == '1' ? 'active' : ''}}" data-key="1" bindtap="changeType">样片</text>
+        <text class="{{type == '2' ? 'active' : ''}}" data-key="2" bindtap="changeType">客片</text>
+      </view>
+    </view>
+    <view class="width100 flex-box list-box">
+      <view wx:for="{{list}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="listTap">
+        <view>
+          <image mode="aspectFill" src="{{item.url}}"></image>
+        </view>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+    <view class="list-nolike width100">
+      <text class="iconfont icon-xiangce"></text>
+      <view> 收藏夹空空 </view>
+      <navigator url="../list/list">
+        <text class="click-link">快去收藏~</text>
+      </navigator>
+
+    </view>
+    <view class="list-loading" wx:if="{{isLoading}}">
+      正在加载更多...
+    </view>
+    <view class="list-loadAll" wx:if="{{isLoaded}}">
+      没有更多了哟~
+    </view>
+    <button open-type="contact" class="fixed-btn iconfont icon-jiaoliu"></button>
+  </view>
+</view>
