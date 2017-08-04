@@ -76,6 +76,10 @@ Page({
    */
   onLoad: function (options) {
     
+    wx.showLoading({
+      title: '加载中',
+    })
+
     var kinds = Number(options.kind);
  
     this.setData({
@@ -90,7 +94,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
+    var that = this
+    setTimeout(function () {
+      that.setData({
+        list: datas.list
+      })
+      wx.hideLoading()
+    }, 2000)
   },
 
   /**

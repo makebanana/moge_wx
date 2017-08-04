@@ -3,32 +3,41 @@
     请先登录
   </view>
   <view wx:if="{{isLoged}}" class="width100">
-    <view class="info-box width100">
+    <view class="info-box">
       <image src="{{imgUrl}}"></image>
       <view>{{nickName}}</view>
     </view>
-    <view class="width100 flex-box">
-      
-      <view class="classname">
-        <text class="iconfont icon-xiangce"></text> 
-        关于我们
-        <text class="iconfont icon-xiangce"></text> 
-      </view>
-      <view class="classname">
-        <text class="iconfont icon-xiangce"></text> 
-        关于我们
-        <text class="iconfont icon-xiangce"></text> 
-      </view>
-      <view class="classname">
-        <text class="iconfont icon-xiangce"></text> 
-        关于我们
-        <text class="iconfont icon-xiangce"></text> 
-      </view>
-      <view class="classname">
-        <text class="iconfont icon-xiangce"></text> 
-        关于我们
-        <text class="iconfont icon-xiangce"></text> 
-      </view>
+    <view class="center-group">  
+      <navigator url="../collection/collection" >
+        <view>
+          <image src="/lib/images/message.png"></image>
+          <text> 消息中心</text> 
+        </view>
+      </navigator>
+      <navigator url="../collection/collection" >
+        <view class="view-last">
+          <image src="/lib/images/collect.png"></image> 
+          
+          <text> 我的收藏</text> 
+        </view>
+      </navigator>
+    </view>
+
+    <view class="center-group">  
+      <navigator url="../collection/collection" >
+        <view>
+          <image src="/lib/images/about.png"></image> 
+          
+          <text> 关于墨阁</text> 
+        </view>
+      </navigator>
+      <navigator url="../suggest/suggest" >
+        <view class="view-last">
+          <image src="/lib/images/suggest.png"></image> 
+        
+          <text> 改进意见</text> 
+        </view>
+      </navigator>
     </view>
   </view>
 </view>

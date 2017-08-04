@@ -5,7 +5,8 @@
     "pages/list/list",
     "pages/collection/collection",
     "pages/center/center",
-    "pages/rich/rich"
+    "pages/rich/rich",
+    "pages/suggest/suggest"
   ],
   "window": {
     "backgroundColor": "#eee",

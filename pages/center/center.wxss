@@ -4,7 +4,10 @@
 }
 
 .info-box{
-  margin-top: 50rpx;
+  margin: 50rpx auto 150rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2px solid #e3e3e3;
+  width: 70%;
 }
 .info-box image{
   width: 150rpx;
@@ -15,9 +18,26 @@
   margin-top: 30rpx;
 }
 
-.flex-box{
-  flex-wrap:wrap;
+.center-group{
+  margin: 0 auto 60rpx;
+  padding: 0 100rpx;
+  width: 70%;
 }
-.flex-box > view{
-  width: 48%;
+.center-group view{
+  border-top: 2px solid #e3e3e3;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.center-group .view-last{
+  border-bottom: 2px solid #e3e3e3;
+}
+.center-group view image{
+  margin: 20rpx 0 0 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.center-group view text{
+  font-size: 28rpx;
+  vertical-align: top;
+  color: #262626;
 }
