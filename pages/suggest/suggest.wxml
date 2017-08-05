@@ -1,7 +1,7 @@
 <view class="container">
   <view class="section width100">
     <form bindsubmit="bindFormSubmit">
-      <textarea placeholder="希望收到您对墨阁摄影的宝贵意见，我们去做到最好！" name="textarea" auto-height/>
+      <textarea auto-focus placeholder="希望收到您对墨阁摄影的宝贵意见，我们去做到最好！" name="textarea" auto-height/>
       <button form-type="submit" type="primary" loading="{{loading}}" disabled="{{loading}}"> {{loading ? '正在提交' : '提交'}} </button>
     </form>
   </view>

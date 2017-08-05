@@ -7,37 +7,62 @@
       <image src="{{imgUrl}}"></image>
       <view>{{nickName}}</view>
     </view>
-    <view class="center-group">  
-      <navigator url="../collection/collection" >
-        <view>
-          <image src="/lib/images/message.png"></image>
-          <text> 消息中心</text> 
-        </view>
-      </navigator>
-      <navigator url="../collection/collection" >
-        <view class="view-last">
-          <image src="/lib/images/collect.png"></image> 
-          
-          <text> 我的收藏</text> 
-        </view>
-      </navigator>
-    </view>
 
-    <view class="center-group">  
-      <navigator url="../collection/collection" >
+    <view class="info-items">
+      <view class="center-group flex-box">  
+      
         <view>
-          <image src="/lib/images/about.png"></image> 
+          <navigator url="../message/massage" >
+            <view>
+              <image src="/lib/images/message.png"></image>
+            </view>
           
-          <text> 关于墨阁</text> 
+            </navigator>
+            <text> 消息中心.png</text> 
+          
         </view>
-      </navigator>
-      <navigator url="../suggest/suggest" >
+      
+      
         <view class="view-last">
-          <image src="/lib/images/suggest.png"></image> 
-        
-          <text> 改进意见</text> 
+        <navigator url="../collection/collection" open-type="switchTab">
+          <view>
+            <image src="/lib/images/collect.png"></image>
+          </view>
+            </navigator>
+          <text> 我的收藏.png</text> 
+          
         </view>
-      </navigator>
+      
+      </view>
+
+      <view class="center-group flex-box">  
+      
+        <view>
+          <navigator url="../rich/rich" >
+            <view>
+              <image src="/lib/images/about.png"></image> 
+            </view>
+            </navigator>
+            <text> 关于墨阁.png</text> 
+          
+        </view>
+     
+      
+        <view class="view-last">
+          <navigator url="../suggest/suggest" >
+            <view>
+              <image src="/lib/images/suggest.png"></image> 
+            </view>     
+            </navigator>
+            <text> 改进意见.png</text> 
+          
+        </view>
+      
+      </view>
+    </view>
+    <view class="width100 logo-footer">
+      <image src="/lib/images/moge_big.png" mode="aspectFit"></image>
     </view>
   </view>
+  
 </view>
