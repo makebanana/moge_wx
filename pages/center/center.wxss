@@ -57,8 +57,8 @@
 }
 
 .center-group > view{
-  margin: 2%;
-  width: 46%;
+  margin: 5%;
+  width: 40%;
 }
 
 .center-group > view view{
@@ -67,9 +67,9 @@
 }
 
 .center-group view image{
-  margin: 75rpx 50rpx;
-  width: 100rpx;
-  height: 100rpx;
+  margin: 60rpx 50rpx;
+  width: 80rpx;
+  height: 80rpx;
 }
 .center-group > view text{
   font-size: 28rpx;

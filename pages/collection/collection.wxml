@@ -3,7 +3,7 @@
     请先登录
   </view>
   <view wx:if="{{isLoged}}" class="width100">
-    <view class="select-box width100">
+    <view class="select-box width100" wx:if="{{type}}">
       <view class="type-one">
         <text class="{{type == '1' ? 'active' : ''}}" data-key="1" bindtap="changeType">样片</text>
         <text class="{{type == '2' ? 'active' : ''}}" data-key="2" bindtap="changeType">客片</text>

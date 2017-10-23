@@ -40,7 +40,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    type: 0,
     list: [],
     isLoading: false,
     isLoaded: false,

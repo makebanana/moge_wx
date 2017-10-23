@@ -15,48 +15,30 @@
   </view>
 
   <view class="index-nav width100 flex-box">
-    <navigator url="../list/list?type=1">
+    <navigator url="../list/list">
        <view class="nav-item flex-1"><text>作品</text><text>展示</text></view>
     </navigator>
-    <navigator url="../list/list?type=2">
-      <view class="nav-item flex-1"><text>客片</text><text>分享</text></view>
-    </navigator>
-    <navigator url="../rich/rich?id=2">
+    <navigator url="../rich/rich?id=1">
       <view class="nav-item flex-1"><text>相片</text><text>制作</text></view>
     </navigator>
     <navigator url="../rich/rich?id=2">
       <view class="nav-item flex-1"><text>摄影</text><text>流程</text></view>
+    </navigator>
+    <navigator url="../rich/rich?id=3">
+      <view class="nav-item flex-1"><text>了解</text><text>更多</text></view>
     </navigator>
   </view>
 
   <view class="width100">
     <view class=" item-title width100 flex-box">
       <text class="flex-4"><text class="iconfont icon-tupian"></text> 风格推荐</text>
-      <navigator url="../list/list?type=1">
+      <navigator url="../list/list">
         <text class="flex-1 iconfont icon-gengduo"></text>
       </navigator>
     </view>
     <view class="width100 flex-box list-box">
       
       <view wx:for="{{picList}}" wx:key="{{item.id}}">
-        <navigator url="../detail/detail?id={{item.id}}">
-          <view>
-            <image mode="aspectFill" src="{{item.url}}"></image>
-          </view>
-          <text>{{item.name}}</text>
-        </navigator>
-      </view>
-    </view>
-  </view>
-  <view class="width100" style="margin-top: 10rpx;">
-    <view class=" item-title width100 flex-box">
-      <text class="flex-4"><text class="iconfont icon-tupian"></text> 客片分享</text>
-      <navigator url="../list/list?type=2">
-        <text class="flex-1 iconfont icon-gengduo"></text>
-      </navigator>
-    </view>
-    <view class="width100 flex-box list-box">
-      <view wx:for="{{picList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="listTap">
         <navigator url="../detail/detail?id={{item.id}}">
           <view>
             <image mode="aspectFill" src="{{item.url}}"></image>
